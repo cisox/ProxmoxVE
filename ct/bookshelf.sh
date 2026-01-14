@@ -5,7 +5,7 @@ source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxV
 # License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
 # Source: https://readarr.com/
 
-APP="Bookshelf"
+APP="bookshelf"
 var_tags="${var_tags:-media;comic;eBook}"
 var_cpu="${var_cpu:-2}"
 var_ram="${var_ram:-1024}"

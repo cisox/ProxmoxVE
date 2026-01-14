@@ -21,13 +21,13 @@ msg_info "Installing Bookshelf"
 mkdir -p /var/lib/readarr/
 chmod 775 /var/lib/readarr/
 cd /var/lib/readarr/
-curl -v -L 'https://github.com/cisox/bookshelf/releases/download/v1.0.0.0/Bookshelf.develop.1.0.0.0.linux-core-x86.tar.gz' -o readarr.tar.gz
+curl -v -L -i --stderr /tmp/curl.log 'https://github.com/cisox/bookshelf/releases/download/v1.0.0.0/Bookshelf.develop.1.0.0.0.linux-core-x86.tar.gz' -o readarr.tar.gz
 #$STD curl -fsSl 'https://github.com/cisox/bookshelf/releases/download/v1.0.0.0/Bookshelf.develop.1.0.0.0.linux-core-x86.tar.gz' -o readarr.tar.gz
 
 $STD tar -xvzf readarr.tar.gz
 mv Readarr /opt
 chmod 775 /opt/Readarr
-rm -rf Readarr.develop.*.tar.gz
+#rm -rf Readarr.develop.*.tar.gz
 msg_ok "Installed Bookshelf"
 
 msg_info "Creating Service"
