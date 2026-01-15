@@ -5,7 +5,7 @@ source <(curl -fsSL https://raw.githubusercontent.com/cisox/ProxmoxVE/main/misc/
 # License: MIT | https://github.com/community-scripts/ProxmoxVE/raw/main/LICENSE
 # Source: https://calibre-ebook.com/
 
-APP="Calibre"
+APP="calibre"
 var_tags="${var_tags:-media;comic;eBook}"
 var_cpu="${var_cpu:-2}"
 var_ram="${var_ram:-1024}"
