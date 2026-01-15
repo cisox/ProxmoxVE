@@ -26,8 +26,8 @@ chmod +x linux-installer.sh
 $STD ./linux-installer.sh install_dir=/opt
 rm -rf linux-installer.sh
 mkdir -p /opt/calibre/library
-cd /opt/calibre/library
 $STD curl -fsSL 'https://github.com/thansen0/sample-epub-minimal/raw/refs/heads/master/minimal.epub' -o minimal.epub
+$STD /opt/calibre/calibredb add minimal.epub --library-path /opt/calibre/library
 msg_ok "Installed Calibre"
 
 msg_info "Creating Service"
@@ -38,7 +38,7 @@ After=syslog.target network.target
 [Service]
 UMask=0002
 Type=simple
-ExecStart=/opt/calibre/bin/calibre-server --port=8080 --enable-local-write /opt/calibre/library
+ExecStart=/opt/calibre/calibre-server --port=8080 --enable-local-write /opt/calibre/library
 TimeoutStopSec=20
 KillMode=process
 Restart=on-failure
