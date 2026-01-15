@@ -21,7 +21,7 @@ msg_info "Installing Bookshelf"
 mkdir -p /var/lib/readarr/
 chmod 775 /var/lib/readarr/
 cd /var/lib/readarr/
-$STD curl -fsSL 'https://github.com/cisox/bookshelf/releases/download/v1.0.0.0/Bookshelf.develop.1.0.0.0.linux-core-x86.tar.gz' -o readarr.tar.gz
+$STD curl -fsSL 'https://github.com/cisox/bookshelf/releases/download/v1.0.0.0/Bookshelf.develop.1.0.0.1000.linux-core-x64.tar.gz' -o readarr.tar.gz
 $STD tar -xvzf readarr.tar.gz
 mv Readarr /opt
 chmod 775 /opt/Readarr
